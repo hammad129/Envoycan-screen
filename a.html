@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <style>
+        .nav-link+.nav-link {
+            margin-left: 0.5rem;
+        }
+
+        .navbar {
+            min-height: 70px;
+            /* Adjust the height as needed */
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar {
+                min-height: 60px;
+                /* Adjust the height for smaller screens */
+            }
+        }
+
+        .custom-light-green {
+            background-color: lightgreen;
+            color: white;
+            /* Set the text color as needed */
+        }
+
+        #chat3 .form-control {
+            border-color: transparent;
+        }
+
+        #chat3 .form-control:focus {
+            border-color: transparent;
+            box-shadow: inset 0px 0px 0px 1px transparent;
+        }
+
+        .badge-dot {
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            margin-left: 2.9rem;
+            margin-top: -.75rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+
+
+            <a href="https://envoycan.com/" class="navbar-brand sticky_logo ">
+                <img class="main_logo_img" style="filter: brightness(50%);"
+                    src="https://envoycan.com/wp-content/uploads/2023/06/Asset-31@4x-e1686576126889.png"
+                    srcset="https://envoycan.com/wp-content/uploads/2023/06/Asset-31@4x-e1686576126889.png 2x"
+                    alt="EnvoyCan">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex ml-2 mx-3">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                    aria-describedby="search-addon" />
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+            </form>
+
+            <div class="collapse navbar-collapse mx-5" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-3  fw-bold text-white" aria-current="page" href="#">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3 fw-bold text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled mx-3  fw-bold text-white" href="#" tabindex="-1"
+                            aria-disabled="true">MyBooking</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-nav">
+                <button class="btn btn-light custom-light-green mx-2">Login/Register</button>
+
+
+                <button class="btn btn-dark btn-outline-light">Join Now</button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- SideBar -->
+    <div class="bg-dark">
+        <div class="container-fluid py-5 ">
+            <div class="row flex-nowrap px-5">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                    <div
+                        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <!-- <a href="/"
+                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline"><img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp" class="rounded" alt="Rounded Image">
+                            </span
+                        </a> -->
+                        <div>
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                alt="avatar" class="d-flex align-self-center me-3 text-center" width="60">
+                            <span class="badge bg-success badge-dot"></span>
+                        </div>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span
+                                        class="ms-1 d-none d-sm-inline text-white font-weight-bold fw-bold">Soul
+                                        ArmStrong</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><button
+                                            class="btn btn-light custom-light-green ">Edit Profile</button></span>
+                                </a>
+                                <!-- <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
+                                            1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
+                                            2
+                                        </a>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <li class="">
+                                <a href="#" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-table"></i> <button type="button"
+                                        class="btn btn-secondary btn-lg btn-block">General
+                                        ></button></a>
+                            </li>
+                            <li>
+                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Dark
+                                        Mode</span></a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
+                                            1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
+                                            2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
+                                </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline">Product</span>
+                                            1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline">Product</span>
+                                            2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline">Product</span>
+                                            3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline">Product</span>
+                                            4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-people"></i> <span
+                                        class="ms-1 d-none d-sm-inline">Customers</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="dropdown pb-4">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
+                                    class="rounded-circle">
+                                <span class="d-none d-sm-inline mx-1">loser</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col py-3">
+                    <section style="background-color: #cdc4f91b;">
+                        <div class="container py-5 bg-dark  ">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="card " id="chat3"
+                                        style="border-radius: 15px;background-color: #f2f2f2;">
+                                        <div class="card-body">
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+
+                                                    <div class="p-3">
+
+                                                        <div class="input-group rounded mb-3">
+                                                            <input type="search" class="form-control rounded"
+                                                                placeholder="Search" aria-label="Search"
+                                                                aria-describedby="search-addon" />
+                                                            <span class="input-group-text border-0" id="search-addon">
+                                                                <i class="fas fa-search"></i>
+                                                            </span>
+                                                        </div>
+
+                                                        <div data-mdb-perfect-scrollbar="true"
+                                                            style="position: relative; height: 400px  ">
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li class="p-2 border-bottom">
+                                                                    <a href="#!" class="d-flex justify-content-between">
+                                                                        <div class="d-flex flex-row">
+                                                                            <div>
+                                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                                                                    alt="avatar"
+                                                                                    class="d-flex align-self-center me-3"
+                                                                                    width="60">
+                                                                                <span
+                                                                                    class="badge bg-success badge-dot"></span>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="fw-bold mb-0">Marie Horwitz
+                                                                                </p>
+                                                                                <p class="small text-muted">Hello, Are
+                                                                                    you
+                                                                                    there?</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="small text-muted mb-1">Just now
+                                                                            </p>
+                                                                            <span
+                                                                                class="badge bg-danger rounded-pill float-end">3</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="p-2 border-bottom">
+                                                                    <a href="#!" class="d-flex justify-content-between">
+                                                                        <div class="d-flex flex-row">
+                                                                            <div>
+                                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                                                                                    alt="avatar"
+                                                                                    class="d-flex align-self-center me-3"
+                                                                                    width="60">
+                                                                                <span
+                                                                                    class="badge bg-warning badge-dot"></span>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="fw-bold mb-0">Alexa Chung</p>
+                                                                                <p class="small text-muted">Lorem ipsum
+                                                                                    dolor sit.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="small text-muted mb-1">5 mins ago
+                                                                            </p>
+                                                                            <span
+                                                                                class="badge bg-danger rounded-pill float-end">2</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="p-2 border-bottom">
+                                                                    <a href="#!" class="d-flex justify-content-between">
+                                                                        <div class="d-flex flex-row">
+                                                                            <div>
+                                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                                    alt="avatar"
+                                                                                    class="d-flex align-self-center me-3"
+                                                                                    width="60">
+                                                                                <span
+                                                                                    class="badge bg-success badge-dot"></span>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="fw-bold mb-0">Danny McChain
+                                                                                </p>
+                                                                                <p class="small text-muted">Lorem ipsum
+                                                                                    dolor sit.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="small text-muted mb-1">Yesterday
+                                                                            </p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="p-2 border-bottom">
+                                                                    <a href="#!" class="d-flex justify-content-between">
+                                                                        <div class="d-flex flex-row">
+                                                                            <div>
+                                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                                    alt="avatar"
+                                                                                    class="d-flex align-self-center me-3"
+                                                                                    width="60">
+                                                                                <span
+                                                                                    class="badge bg-danger badge-dot"></span>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="fw-bold mb-0">Ashley Olsen</p>
+                                                                                <p class="small text-muted">Lorem ipsum
+                                                                                    dolor sit.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pt-1">
+                                                                            <p class="small text-muted mb-1">Yesterday
+                                                                            </p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-md-6 col-lg-7 col-xl-8">
+
+                                                    <div class="pt-3 pe-3" data-mdb-perfect-scrollbar="true"
+                                                        style="position: relative; height: 400px">
+
+                                                        <div class="d-flex flex-row justify-content-start">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                            <div>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">Lorem ipsum
+                                                                    dolor
+                                                                    sit amet, consectetur adipiscing elit, sed do
+                                                                    eiusmod
+                                                                    tempor
+                                                                    incididunt ut labore et
+                                                                    dolore
+                                                                    magna aliqua.</p>
+                                                                <p
+                                                                    class="small ms-3 mb-3 rounded-3 text-muted float-end">
+                                                                    12:00 PM | Aug
+                                                                    13</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-end">
+                                                            <div>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Ut enim
+                                                                    ad minim veniam,
+                                                                    quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex
+                                                                    ea commodo
+                                                                    consequat.</p>
+                                                                <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM
+                                                                    |
+                                                                    Aug 13</p>
+                                                            </div>
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-start">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                            <div>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">Duis aute
+                                                                    irure
+                                                                    dolor in reprehenderit in voluptate velit esse
+                                                                    cillum
+                                                                    dolore eu
+                                                                    fugiat nulla pariatur.
+                                                                </p>
+                                                                <p
+                                                                    class="small ms-3 mb-3 rounded-3 text-muted float-end">
+                                                                    12:00 PM | Aug
+                                                                    13</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-end">
+                                                            <div>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Excepteur
+                                                                    sint occaecat
+                                                                    cupidatat
+                                                                    non proident, sunt in culpa qui officia deserunt
+                                                                    mollit
+                                                                    anim id est
+                                                                    laborum.</p>
+                                                                <p class="small me-3 mb-3 rounded-3 text-muted">12:00 PM
+                                                                    |
+                                                                    Aug 13</p>
+                                                            </div>
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                        </div>
+
+                                                        <div
+                                                            class="text-muted d-flex justify-content-start align-items-center pe-3 pt-3 mt-2">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                                                alt="avatar 3" style="width: 40px; height: 100%;">
+                                                            <input type="text" class="form-control form-control-lg"
+                                                                id="exampleFormControlInput2"
+                                                                placeholder="Type message">
+                                                            <a class="ms-1 text-muted" href="#!"><i
+                                                                    class="fas fa-paperclip"></i></a>
+                                                            <a class="ms-3 text-muted" href="#!"><i
+                                                                    class="fas fa-smile"></i></a>
+                                                            <a class="ms-3" href="#!"><i
+                                                                    class="fas fa-paper-plane"></i></a>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- chatbox -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
